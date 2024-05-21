@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from '../images/Logo .svg'
-
-function Nav(){
+const Nav = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
+    const tooglemenu =  () =>{
+        setMenuOpen(!menuOpen);
+    }
     return(
-        <nav className="navbar">
-            <a href="/" >
+        <nav className={`navbar ${menuOpen ? "open" : ""}`}>
+            <a href="/" className="logo" >
                 <img src={logo} alt="Logo"/>
             </a>
 
 
             {/*moblie navbar*/}
-            <div>
+            <div className="menu-icon" onClick={tooglemenu}>
                 <div className="bar"></div>
                 <div className="bar"></div>
                 <div className="bar"></div>
@@ -18,7 +21,7 @@ function Nav(){
 
             {/*nav items*/}
 
-            <ul>
+            <ul className={`nav-links ${menuOpen ? "visible": ""}`}>
                 <li>
                     <a href="/">Home</a>
                 </li>
