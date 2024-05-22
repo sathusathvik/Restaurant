@@ -17,7 +17,7 @@ const Main = () => {
 
     const fetchAPI = function(date){
         let result = [];
-        let random = seedRandom(date.getdate());
+        let random = seedRandom(date.getDate());
         for ( let i = 17; i <=23; i++) {
             if(random() < 0.5){
                 result.push(i + ':00');

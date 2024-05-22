@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 const BookingForm = (props) => {
     const [date, setDate] = useState("");
-    const [time, setTime] = useState("");
-    const [guest, setGuest] = useState("");
+    const [time, setTimes] = useState("");
+    const [guest, setGuests] = useState("");
     const [occasion, setOccasion] = useState("");
 
     const handleSubmit = (e) => {
@@ -19,7 +19,7 @@ const BookingForm = (props) => {
     return (
         <header>
             <section>
-                <form>
+                <form onsubmit={handleSubmit}>
                 <fieldset>
                     <div>
                         <label htmlFor="book-date">Choose Date</label>
