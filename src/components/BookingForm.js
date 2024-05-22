@@ -8,7 +8,7 @@ const BookingForm = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        props.SubmitForm(e);
+        props.submitForm(e);
     }
 
     const handleChange = (e) => {
@@ -19,7 +19,7 @@ const BookingForm = (props) => {
     return (
         <header>
             <section>
-                <form onsubmit={handleSubmit}>
+                <form onSubmit={handleSubmit}>
                 <fieldset>
                     <div>
                         <label htmlFor="book-date">Choose Date</label>

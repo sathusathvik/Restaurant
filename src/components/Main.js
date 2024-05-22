@@ -51,7 +51,7 @@ const Main = () => {
             <Routes>
                 <Route path='/' element={<Header/>}/>
                 <Route path='/booking' element={<Booking availbleTime={state} dispatch={dispatch} submitForm={submitForm}/>}/>
-                <Route path='/confirmed' element={<CofirmedBooking/>}/>
+                <Route path='/confirmed' element={<ConfirmedBooking/>}/>
             </Routes>
         </main>
     );
