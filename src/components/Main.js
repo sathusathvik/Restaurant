@@ -1,8 +1,8 @@
 import React, { useReducer } from "react";
 import Header from "./Header";
-import { useNavigate } from "react-router-dom";
 import Booking from "./Booking";
-import { Routes, Route } from "react-router-dom";
+import ConfirmedBooking from "./ConfirmedBooking";
+import { Route, Routes, useNavigate } from "react-router-dom";
 
 const Main = () => {
 
@@ -38,7 +38,7 @@ const Main = () => {
 
     function updateTime(state, date){
         return{availbleTime:fetchAPI(new Date())}
-    } 
+    }
 
     const navigate = useNavigate();
     function submitForm (formData){
@@ -51,7 +51,7 @@ const Main = () => {
             <Routes>
                 <Route path='/' element={<Header/>}/>
                 <Route path='/booking' element={<Booking availbleTime={state} dispatch={dispatch} submitForm={submitForm}/>}/>
-                <Route path='/confirmed' element={<cofirmedBooking/>}/>
+                <Route path='/confirmed' element={<CofirmedBooking/>}/>
             </Routes>
         </main>
     );

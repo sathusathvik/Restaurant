@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 const BookingForm = (props) => {
     const [date, setDate] = useState("");
-    const [time, setTimes] = useState("");
-    const [guest, setGuests] = useState("");
+    const [time, setTime] = useState("");
+    const [guest, setGuest] = useState("");
     const [occasion, setOccasion] = useState("");
 
     const handleSubmit = (e) => {
@@ -41,8 +41,8 @@ const BookingForm = (props) => {
                     {/* for number of guests*/}
 
                     <div>
-                        <label htmlFor="book-guest">Number of Guest</label>
-                        <input id="book-guest" min={1} value={guest} onChange={(e) => setGuest(e.target.value)}/>
+                        <label htmlFor="book-guest">Number of Guests:</label>
+                        <input id="book-guest" min="1" value={guest} onChange={(e) => setGuest(e.target.value)}/>
                     </div>
 
                     {/*occasion type*/}
@@ -59,9 +59,10 @@ const BookingForm = (props) => {
                     {/*submit button*/}
 
                     <div className="btnReceive">
-                        <input aria-label="On-Click" type="submit" value={"Make Your Reservation"}/>
+                        <input aria-label="On Click" type="submit" value={"Make Your Reservation"}/>
                     </div>
                 </fieldset>
+
                 </form>
             </section>
         </header>
